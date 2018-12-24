@@ -1,4 +1,4 @@
-# element
+# Element
 
 > 项目为element初始化模板，加入了全局过滤器，全局function，sass，axios，路由，vuex，md5等；
 
