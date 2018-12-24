@@ -1,6 +1,6 @@
-# star
+# element
 
-> 项目为element启动模板，加入了全局过滤器，全局function，sass，axios，路由，vuex，md5等；
+> 项目为element初始化模板，加入了全局过滤器，全局function，sass，axios，路由，vuex，md5等；
 
  * element：按需加载，配置文件 src/plugins/element.js;
  * 全局函数：已经挂载全局，调用方法 `this.test（）`  即可；配置文件 src/plugins/Gfunction.js;
