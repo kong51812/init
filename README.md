@@ -1,29 +1,41 @@
-# Element
+# 概述
+> mpvue的初始化模板（mpvue,router,Flyio,Element UI,Vant等）
+>
+> clone 后去官网下载element与vant的组件库，放在dist文件目录下，路径已在router.js中的注释；
+>
+> 项目启动后去微信开发者工具中查看效果；
 
-> 项目为element初始化模板，加入了全局过滤器，全局function，sass，axios，路由，vuex，md5等；
+* 第三方组件使用
 
- * element：按需加载，配置文件 src/plugins/element.js;
- * 全局函数：已经挂载全局，调用方法 `this.test（）`  即可；配置文件 src/plugins/Gfunction.js;
- * 全局过滤器：已经挂载全局，调用方法 {test | GFtest}  配置文件 src/plugins/Gfilters.js;
- * 输出文件地址为相对路径 （./）配置文件 vue.config.js；
- * vuex state中的变量在组件中用 `this.$store.state.变量名 `
+  * 官网下载第三方组件库，拿出用组件放在dist目录下，路径在router.js中； 
+* 路由
+  * 跳转 ` this.$router.push(url)`,注意url路径问题；
+  * 传参  
+
+```
+路由A页面
+this.$router.push({
+    path: '../b',
+    query: {
+      id:id,
+    }
+  });
+```
+
+```
+路由B页面
+onLoad: function (query) {
+    query.id
+```
 
 ## Project setup
+
 ```
 npm install
 ```
 
 ### Compiles and hot-reloads for development
-```
-npm run serve
-```
 
-### Compiles and minifies for production
 ```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
+npm run dev
 ```

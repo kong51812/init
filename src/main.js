@@ -1,29 +1,29 @@
 import Vue from 'vue'
-import './plugins/axios'
-import App from './App.vue'
-import router from './router'
-import store from './store'
-import './plugins/element.js'
-
-
-//插件区
-import md5 from 'js-md5'; //MD5加密
-Vue.prototype.$md5 = md5;
-
-
-//自定义全局插件
-import * as custom from './plugins/Gfilters'
-Object.keys(custom).forEach(key => {
-  Vue.filter(key, custom[key])
-})
-import Gfunction from './plugins/Gfunction' //全局function
-Vue.use(Gfunction)
+import App from '@/App'
+import MpvueRouterPatch from 'mpvue-router-patch'
+Vue.use(MpvueRouterPatch)
 
 Vue.config.productionTip = false
-window.h5 = {}
+App.mpType = 'app'
 
-new Vue({
-  router,
-  store,
-  render: h => h(App)
-}).$mount('#app')
+const app = new Vue({
+  ...App
+})
+
+app.$mount()
+
+export default {
+  // 这个字段走 app.json
+  config: {
+    pages: [
+      
+    ],
+    window: {
+      backgroundTextStyle: 'light',
+      navigationBarBackgroundColor: '#fff',
+      navigationBarTitleText: 'mpvue demo',
+      navigationBarTextStyle: 'black',
+      enablePullDownRefresh: true
+    }
+  }
+}
