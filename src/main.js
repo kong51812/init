@@ -20,7 +20,6 @@ import Gfunction from './plugins/Gfunction' //全局function
 Vue.use(Gfunction)
 
 Vue.config.productionTip = false
-window.h5 = {}
 
 new Vue({
   router,
