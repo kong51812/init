@@ -2,15 +2,15 @@
 	"description": "项目配置文件。",
 	"setting": {
 		"urlCheck": true,
-		"es6": true,
+    "es6": true,
 		"postcss": true,
 		"minified": true,
 		"newFeature": true
 	},
-	"miniprogramRoot": "dist/",
+	"miniprogramRoot": "./dist/",
 	"compileType": "miniprogram",
-	"appid": "wxdfbaaf1dacdebda8",
-	"projectname": "init",
+	"appid": "touristappid",
+	"projectname": "my-project",
 	"condition": {
 		"search": {
 			"current": -1,

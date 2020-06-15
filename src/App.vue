@@ -1,17 +1,28 @@
-<!-- App.vue中，是不能够写template的，不会编译 -->
 <script>
 export default {
-  mpType: 'app'
+  created () {
+    // 调用API从本地缓存中获取数据
+    const logs = wx.getStorageSync('logs') || []
+    logs.unshift(Date.now())
+    wx.setStorageSync('logs', logs)
+
+    // eslint-disable-next-line
+    console.log('app created and cache logs by setStorageSync')
+  }
 }
 </script>
 
 <style>
 .container {
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
 }
-div{
-	/*font-size: 16px;*/
-}
+/* this rule will be remove */
 * {
   transition: width 2s;
   -moz-transition: width 2s;
