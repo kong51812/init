@@ -1,55 +1,44 @@
 {
-  "name": "test1",
+  "name": "antd-demo-ts",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
-  },
   "dependencies": {
-    "element-ui": "^2.4.5",
-    "js-md5": "^0.7.3",
-    "sass-loader": "^7.1.0",
-    "vue": "^2.5.17",
-    "vue-router": "^3.0.1",
-    "vuex": "^3.0.1"
+    "@craco/craco": "^5.6.4",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "@types/jest": "^24.0.0",
+    "@types/node": "^12.0.0",
+    "@types/react": "^16.9.0",
+    "@types/react-dom": "^16.9.0",
+    "@types/react-router-dom": "^5.1.5",
+    "antd": "^4.3.4",
+    "craco-less": "^1.17.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.1",
+    "typescript": "~3.7.2"
   },
-  "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.0.1",
-    "@vue/cli-plugin-eslint": "^3.0.1",
-    "@vue/cli-service": "^3.0.1",
-    "axios": "^0.18.0",
-    "babel-eslint": "^10.0.1",
-    "babel-plugin-component": "^1.1.1",
-    "eslint": "^5.8.0",
-    "eslint-plugin-vue": "^5.0.0-0",
-    "vue-cli-plugin-axios": "0.0.4",
-    "vue-cli-plugin-element": "^1.0.0",
-    "vue-template-compiler": "^2.5.17"
+  "scripts": {
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
     ],
-    "rules": {},
-    "parserOptions": {
-      "parser": "babel-eslint"
-    }
-  },
-  "postcss": {
-    "plugins": {
-      "autoprefixer": {}
-    }
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not ie <= 8"
-  ]
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }
