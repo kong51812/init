@@ -1,0 +1,37 @@
+import React from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Link
+} from 'react-router-dom';
+import routes from './router';
+import { RouteWithSubRoutes } from './assets/common';
+import { RouteInterface } from './assets/interface';
+import './App.less';
+import { Button } from 'antd';
+
+const App: React.FC = () => {
+  return (
+    <Router>
+      <div className="App">
+      {/* <Button type="primary">Button</Button>
+        <header className="App-header">
+          <ul>
+            <li><Link to="/home">Home 首页</Link></li>
+            <li><Link to="/about">About 关于</Link></li>
+            <li><Link to="/link">Link 联系</Link></li>
+          </ul>
+        </header> */}
+
+        <Switch>
+          {routes.map((route: RouteInterface, i: number) => {
+            return RouteWithSubRoutes(route, i)
+          })}
+        </Switch>
+
+      </div>
+    </Router>
+  );
+}
+
+export default App;
